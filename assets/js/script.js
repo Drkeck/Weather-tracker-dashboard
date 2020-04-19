@@ -38,6 +38,9 @@ var logInput = function(userCity) {
 var cityButton = function() {
     var queryString = document.location.search;
     var cityNameBar = queryString.split("=");
+    if (!cityNameBar[1]) {
+        return;
+    }
     weatherapicall(cityNameBar[1]);
 }
 
