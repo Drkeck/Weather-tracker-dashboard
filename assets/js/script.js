@@ -7,6 +7,7 @@ var cityTemp = document.querySelector('#temp');
 var cityHumid = document.querySelector('#humid');
 var cityWind = document.querySelector('#wind-speed');
 var cityUv = document.querySelector('#uv-index');
+var listId = 0
 var citiesList = {};
 
 var userInput = function(event) {
@@ -21,6 +22,16 @@ var logInput = function(userCity) {
     listEl.classList = "list-group-item text-dark"
     listEl.setAttribute('href', './index.html?city=' + userCity);
     listEl.textContent = userCity;
+
+    citiesList[listId] = userCity;
+
+    listId++
+    if (listId === 5) {
+        listId = 0
+    };
+
+    localStorage.setItem("City List", JSON.stringify(citiesList));
+
     savedCities.appendChild(listEl);
 }
 
@@ -79,4 +90,28 @@ var createForecast = function(lat, lon) {
     });
 }
 
+var loadData = function() {
+    citiesList = JSON.parse(localStorage.getItem("City List"));
+    if (!citiesList) {
+        citiesList = {
+            0: "",
+            1: "",
+            2: "",
+            3: "",
+            4: "",
+        };
+        return;
+    } else {
+        for (var i = 0; i < 5; i++) {
+            var tempCityName = citiesList[i];
+            if (!tempCityName){
+                return;
+            }
+            logInput(tempCityName);
+        }
+    }
+}
+
 cityInputEl.addEventListener("submit", userInput);
+
+loadData();
