@@ -12,7 +12,7 @@
   </head>
   <body>
     <header class="bg-dark">
-        <h1 class="text-light text-center p-2">Weather Dashboard</h1>
+        <h1 class="text-light text-center p-2 m-0">Weather Dashboard</h1>
     </header>
     <div class="container-fluid">
         <div class="row flex-xl-nowrap">
@@ -29,7 +29,46 @@
                   </div>
             </div>
             <main class="col-md-9 col-xl-8 h-100 bg-white">
+                <div>
+                    <div class="card px-5 py-3 m-3">
+                        <h1 class="mb-4"><span id="city-and-date">Enter City</span></h1>
+                        <p>Temperature: <span id="temp"></span> &deg;F</p>
+                        <p>Humidity: <span id="humid"></span>%</p>
+                        <p>Wind Speed: <span id="wind-speed"></span> MPH</p>
+                        <p>UV Index: <span id="uv-index"></span></p>
+                    </div>
+                    <div class="ml-3">
+                        <h4>5 Day Forcast:</h4>
+                        <div class="row">
+                            <div class="col bg-primary rounded p-2 mx-3 text-light">
+                                <h4 id="Date-1">Date</h4>
+                                <p>Temp: <span id="temp-1"></span>&deg;F</p>
+                                <p>Humidity: <span id="humid-1"></span></p>
+                            </div>
+                            <div class="col bg-primary rounded p-2 mx-3 text-light">
+                                <h4 id="Date-2">Date</h4>
+                                <p>Temp: <span id="temp-2"></span>&deg;F</p>
+                                <p>Humidity: <span id="humid-2"></span></p>
+                            </div>
+                            <div class="col bg-primary rounded p-2 mx-3 text-light">
+                                <h4 id="Date-3">Date</h4>
+                                <p>Temp: <span id="temp-3"></span>&deg;F</p>
+                                <p>Humidity: <span id="humid-3"></span></p>
+                            </div>
+                            <div class="col bg-primary rounded p-2 mx-3 text-light">
+                                <h4 id="Date-4">Date</h4>
+                                <p>Temp: <span id="temp-4"></span>&deg;F</p>
+                                <p>Humidity: <span id="humid-4"></span></p>
+                            </div>
+                            <div class="col bg-primary rounded p-2 mx-3 text-light">
+                                <h4 id="Date-5">Date</h4>
+                                <p>Temp: <span id="temp-5"></span>&deg;F</p>
+                                <p>Humidity: <span id="humid-5"></span></p>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
