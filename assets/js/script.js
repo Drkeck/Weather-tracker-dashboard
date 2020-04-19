@@ -42,7 +42,7 @@ var cityButton = function() {
 }
 
 var weatherapicall = function(userCity) {
-    var apiUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + userCity + "&units=imperial&appid=208b092a8fbdf8fceaf08ebd60cc31df";
+    var apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + userCity + "&units=imperial&appid=208b092a8fbdf8fceaf08ebd60cc31df";
     fetch(apiUrl).then(function(response){
         if (response.ok) {
             response.json().then(function(data){
@@ -67,7 +67,7 @@ var createForecast = function(lat, lon) {
     fetch(dailyForCall).then(function(response) {
         response.json().then(function(data) {
             console.log(data.daily[0]);
-            cityIcon.setAttribute("src", 'http://openweathermap.org/img/wn/' + data.daily[0].weather[0].icon + '@2x.png')
+            cityIcon.setAttribute("src", 'https://openweathermap.org/img/wn/' + data.daily[0].weather[0].icon + '@2x.png')
             cityTemp.textContent = data.daily[0].temp.day;
             cityHumid.textContent = data.daily[0].humidity;
             cityWind.textContent = data.daily[0].wind_speed;
