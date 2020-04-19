@@ -31,7 +31,8 @@
             <main class="col-md-9 col-xl-8 h-100 bg-white">
                 <div>
                     <div class="card px-5 py-3 m-3">
-                        <h1 class="mb-4"><span id="city-and-date">Enter City</span></h1>
+                        <h1 class="mb-4" id="city-name"> <span id="city-date">Enter City</span></h1>
+                        <img style="max-width: 100px; max-height: 100px;" id="icon">
                         <p>Temperature: <span id="temp"></span> &deg;F</p>
                         <p>Humidity: <span id="humid"></span>%</p>
                         <p>Wind Speed: <span id="wind-speed"></span> MPH</p>
@@ -39,29 +40,34 @@
                     </div>
                     <div class="ml-3">
                         <h4>5 Day Forcast:</h4>
-                        <div class="row">
+                        <div class="row nowrap">
                             <div class="col bg-primary rounded p-2 mx-3 text-light">
-                                <h4 id="Date-1">Date</h4>
+                                <h4 id="Date-1"></h4>
+                                <img id="icon-1">
                                 <p>Temp: <span id="temp-1"></span>&deg;F</p>
                                 <p>Humidity: <span id="humid-1"></span></p>
                             </div>
                             <div class="col bg-primary rounded p-2 mx-3 text-light">
-                                <h4 id="Date-2">Date</h4>
+                                <h4 id="Date-2"></h4>
+                                <img id="icon-2">
                                 <p>Temp: <span id="temp-2"></span>&deg;F</p>
                                 <p>Humidity: <span id="humid-2"></span></p>
                             </div>
                             <div class="col bg-primary rounded p-2 mx-3 text-light">
-                                <h4 id="Date-3">Date</h4>
+                                <h4 id="Date-3"></h4>
+                                <img id="icon-3">
                                 <p>Temp: <span id="temp-3"></span>&deg;F</p>
                                 <p>Humidity: <span id="humid-3"></span></p>
                             </div>
                             <div class="col bg-primary rounded p-2 mx-3 text-light">
-                                <h4 id="Date-4">Date</h4>
+                                <h4 id="Date-4"></h4>
+                                <img id="icon-4">
                                 <p>Temp: <span id="temp-4"></span>&deg;F</p>
                                 <p>Humidity: <span id="humid-4"></span></p>
                             </div>
                             <div class="col bg-primary rounded p-2 mx-3 text-light">
-                                <h4 id="Date-5">Date</h4>
+                                <h4 id="Date-5"></h4>
+                                <img id="icon-5">
                                 <p>Temp: <span id="temp-5"></span>&deg;F</p>
                                 <p>Humidity: <span id="humid-5"></span></p>
                             </div>
@@ -78,6 +84,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
