@@ -35,6 +35,12 @@ var logInput = function(userCity) {
     savedCities.appendChild(listEl);
 }
 
+var cityButton = function() {
+    var queryString = document.location.search;
+    var cityNameBar = queryString.split("=");
+    weatherapicall(cityNameBar[1]);
+}
+
 var weatherapicall = function(userCity) {
     var apiUrl = "http://api.openweathermap.org/data/2.5/forecast?q=" + userCity + "&units=imperial&appid=208b092a8fbdf8fceaf08ebd60cc31df";
     fetch(apiUrl).then(function(response){
@@ -114,4 +120,6 @@ var loadData = function() {
 
 cityInputEl.addEventListener("submit", userInput);
 
+
 loadData();
+cityButton();
